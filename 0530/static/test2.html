@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #cont1{
+            width:100%;
+            max-width:1200px;
+            margin:0 auto;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            /* gap:10px; */
+        }
+        #cont1>img{
+            width:25%;
+            padding-right:10px;
+            box-sizing: border-box;
+            /* width:calc( (1200px - 30px) /4 ); */
+        }
+
+    </style>
+    <h2>여러줄 배치하기</h2>
+    <div id="cont1">
+        <img src="https://loremflickr.com/300/400?random=1">
+        <img src="https://loremflickr.com/300/400?random=2">
+        <img src="https://loremflickr.com/300/400?random=3">
+        <img src="https://loremflickr.com/300/400?random=4">
+        <img src="https://loremflickr.com/300/400?random=5">
+        <img src="https://loremflickr.com/300/400?random=6">
+        <img src="https://loremflickr.com/300/400?random=7">
+        <img src="https://loremflickr.com/300/400?random=8">
+        <img src="https://loremflickr.com/300/400?random=9">
+        <img src="https://loremflickr.com/300/400?random=10">
+    </div>
+
+    <style>
+        #card_wrap{
+            display:flex;
+            flex-wrap:wrap;
+            width:400px;
+            box-sizing:border-box;
+            column-gap: 10px;
+        }
+        .card{
+            width:33.33%;
+            display:flex;
+            flex-direction:column;
+            
+        }
+        .car:nth-child(1), .car:nth-child(4){
+            padding-right:6px;
+        }
+        .card:nth-child(2), .card:nth-child(5){
+            padding-left:3px;
+            padding-right:3px;
+        }
+        .card:nth-child(3), .card:nth-child(6){
+            padding-left:6px;
+        }
+        .card .card_img{
+            width:100%;
+            border-radius:5px;
+            overflow:hidden;
+        }
+        .car .card_img{
+            width:100%;
+            display:block;
+        }
+        .car .car_img img{
+            width:100%;
+            display:block;
+        }
+        .card_text{
+            margin:0;
+            padding-top:5px;
+            -webkit-line-clamp: 2; /* 화면에 표시 할 라인 수 */
+            overflow:hidden; /* overflow - 지정된 크기보다 큰 영역또는 텍스트, 이미지를 
+                                            화면에 어떻게 표시 할 것인지 설정 */
+            height:42px;
+            text-overflow:ellipsis;
+            display:-webkit-box;
+            -webkit-box-orient: vertical;
+        }
+
+    </style>
+    <div id="car_wrap">
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/130?random=1" alt=""?></div>
+            <p class="card_text">고양이</p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/130?random=1" alt=""></div>
+            <p class="card_text">고양이2</p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/130?random=2" alt=""></div>
+            <p class="card_text">고양이3</p>
+        </div>
+        <div class="card">     
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/130?random=3" alt=""></div>
+            <p class="card_text">고양이4</p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/130?random=4" alt=""></div>
+            <p class="card_text">고양이5</p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/130?random=5" alt=""></div>
+            <p class="card_text">고양이6</p>
+        </div>
+        <div class="card">
+    </div>
+
+
+    <style>
+        #box{
+            display:flex;
+            width:1000px;
+            padding:30px 20px;
+            box-sizing:border-box;
+            flex-wrap:wrap;
+            background-color:#eee;
+            row-gap:40px;
+            flex-direction:column;
+            height:350px;
+        }
+        .list{
+            width:50%;
+            display:flex;
+            align-items:center;
+        }
+        .mark{
+            padding:10px;
+        }
+        .title{ font-weight:800; }
+        .detail{ color:#999;}
+
+    </style>
+
+    <h2> flex 실습 2</h2>
+    <div id="box">
+        <div class="list">
+            <div class="mark">●</div>
+            <div class="text">
+                <div class="title">똑똑한 인사정보 관리</div>
+                <div class="detail">한 곳에서 관리하는 인사 및 개인정보</div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="mark">●</div>
+            <div class="text">
+                <div class="title">회사 문서 관리</div>
+                <div class="detail">회사의 다양한 문서 및 증명서 보관</div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="mark">●</div>
+            <div class="text">
+                <div class="title">구성원 근무 휴가 관리</div>
+                <div class="detail">우리회사 문화에 알맞는 근무와 휴가 관리</div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="mark">●</div>
+            <div class="text">
+                <div class="title">할 일 요청 및 공지사항 작성</div>
+                <div class="detail">한눈에 들어오는 할 일과 회사 소식</div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="mark">●</div>
+            <div class="text">
+                <div class="title">워크플로우(전자결재)</div>
+                <div class="detail">회사의 모든 의사결정과 커뮤니케이션</div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="mark">●</div>
+            <div class="text">
+                <div class="title">외부 서비스 연동</div>
+                <div class="detail">구글 혹은 슬랙과 제품내 주요 기능 연동을 통한 편의성 제공</div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="mark">●</div>
+            <div class="text">
+                <div class="title">HR 인사이트(Analytics)</div>
+                <div class="detail">심층 분석되 회사HR 데이터 확인</div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="mark">●</div>
+            <div class="text">
+                <div class="title">강력한 보안</div>
+                <div class="detail">ㅇㅇㅇ</div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
