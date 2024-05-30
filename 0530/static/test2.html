@@ -1,3 +1,4 @@
+<!--  flex_test2.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,22 +14,21 @@
             margin:0 auto;
             display:flex;
             flex-wrap:wrap;
-            justify-content:center;
+            justify-content: center;
             /* gap:10px; */
         }
         #cont1>img{
             width:25%;
             padding-right:10px;
             box-sizing: border-box;
-            /* width:calc( (1200px - 30px) /4 ); */
+            /* width: calc( (1200px - 30px) / 4 );  */
         }
-
     </style>
-    <h2>여러줄 배치하기</h2>
+    <h2> 여러줄 배치하기 </h2>
     <div id="cont1">
-        <img src="https://loremflickr.com/300/400?random=1">
-        <img src="https://loremflickr.com/300/400?random=2">
-        <img src="https://loremflickr.com/300/400?random=3">
+        <img src="https://loremflickr.com/300/400/dog?random=1">
+        <img src="https://loremflickr.com/300/400/korea?random=2">
+        <img src="https://loremflickr.com/300/400/tiger?random=3">
         <img src="https://loremflickr.com/300/400?random=4">
         <img src="https://loremflickr.com/300/400?random=5">
         <img src="https://loremflickr.com/300/400?random=6">
@@ -43,16 +43,17 @@
             display:flex;
             flex-wrap:wrap;
             width:400px;
-            box-sizing:border-box;
-            column-gap: 10px;
+            box-sizing: border-box;
+            /* column-gap: 10px; */
+            row-gap:9px;
         }
         .card{
             width:33.33%;
             display:flex;
-            flex-direction:column;
-            
+            flex-direction: column;
+            box-sizing: border-box;
         }
-        .car:nth-child(1), .car:nth-child(4){
+        .card:nth-child(1), .card:nth-child(4){
             padding-right:6px;
         }
         .card:nth-child(2), .card:nth-child(5){
@@ -62,16 +63,13 @@
         .card:nth-child(3), .card:nth-child(6){
             padding-left:6px;
         }
+
         .card .card_img{
             width:100%;
-            border-radius:5px;
-            overflow:hidden;
+            border-radius: 5px;
+            overflow: hidden;
         }
-        .car .card_img{
-            width:100%;
-            display:block;
-        }
-        .car .car_img img{
+        .card .card_img img{
             width:100%;
             display:block;
         }
@@ -79,47 +77,44 @@
             margin:0;
             padding-top:5px;
             -webkit-line-clamp: 2; /* 화면에 표시 할 라인 수 */
-            overflow:hidden; /* overflow - 지정된 크기보다 큰 영역또는 텍스트, 이미지를 
-                                            화면에 어떻게 표시 할 것인지 설정 */
+            overflow:hidden;  /* overflow - 지정된 크기보다 큰 영역또는 텍스트, 이미지를
+                                 화면에 어떠헤 표시 할것인지 설정  */
             height:42px;
-            text-overflow:ellipsis;
+            
+            text-overflow: ellipsis;
             display:-webkit-box;
             -webkit-box-orient: vertical;
         }
-
     </style>
-    <div id="car_wrap">
+    <div id="card_wrap">
         <div class="card">
             <div class="card_img">
-                <img src="https://loremflickr.com/100/130?random=1" alt=""?></div>
-            <p class="card_text">고양이</p>
+                <img src="https://loremflickr.com/100/130?random=1" alt="">
+            </div>
+            <p class="card_text">html 구조의시작 헤더</p>
         </div>
         <div class="card">
             <div class="card_img">
-                <img src="https://loremflickr.com/100/130?random=1" alt=""></div>
-            <p class="card_text">고양이2</p>
+                <img src="https://loremflickr.com/100/130?random=2" alt="">
+            </div>
+            <p class="card_text">본문 푸터까지 마크업, H1,H2</p>
         </div>
         <div class="card">
-            <div class="card_img">
-                <img src="https://loremflickr.com/100/130?random=2" alt=""></div>
-            <p class="card_text">고양이3</p>
-        </div>
-        <div class="card">     
-            <div class="card_img">
-                <img src="https://loremflickr.com/100/130?random=3" alt=""></div>
-            <p class="card_text">고양이4</p>
+            <div class="card_img"><img src="https://loremflickr.com/100/130?random=3" alt=""></div>
+            <p class="card_text">제목을 표시하고 p태그로 문장</p>
         </div>
         <div class="card">
-            <div class="card_img">
-                <img src="https://loremflickr.com/100/130?random=4" alt=""></div>
-            <p class="card_text">고양이5</p>
+            <div class="card_img"><img src="https://loremflickr.com/100/130?random=4" alt=""></div>
+            <p class="card_text">링크는 A, 이미지는 IMG</p>
         </div>
         <div class="card">
-            <div class="card_img">
-                <img src="https://loremflickr.com/100/130?random=5" alt=""></div>
-            <p class="card_text">고양이6</p>
+            <div class="card_img"><img src="https://loremflickr.com/100/130?random=5" alt=""></div>
+            <p class="card_text">CSS 스타일 색상 폰트 레이아웃</p>
         </div>
         <div class="card">
+            <div class="card_img"><img src="https://loremflickr.com/100/130?random=6" alt=""></div>
+            <p class="card_text">클래스와 아이디로 선택하고 헥사코드</p>
+        </div>
     </div>
 
 
@@ -128,27 +123,26 @@
             display:flex;
             width:1000px;
             padding:30px 20px;
-            box-sizing:border-box;
-            flex-wrap:wrap;
-            background-color:#eee;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            background-color: #eee;
             row-gap:40px;
-            flex-direction:column;
+            flex-direction: column;
             height:350px;
         }
         .list{
             width:50%;
-            display:flex;
-            align-items:center;
+            display: flex;
+            align-items: center;
         }
         .mark{
             padding:10px;
         }
-        .title{ font-weight:800; }
+        .title{  font-weight: 800;}
         .detail{ color:#999;}
-
     </style>
 
-    <h2> flex 실습 2</h2>
+    <h2> flex 실습 2 </h2>
     <div id="box">
         <div class="list">
             <div class="mark">●</div>
@@ -203,11 +197,10 @@
             <div class="mark">●</div>
             <div class="text">
                 <div class="title">강력한 보안</div>
-                <div class="detail">ㅇㅇㅇ</div>
+                <div class="detail">국제표준화기구에서 제정한 정보보호 관리체계 인증</div>
             </div>
         </div>
     </div>
-
 
 </body>
 </html>
