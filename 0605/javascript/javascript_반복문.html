@@ -15,7 +15,7 @@
         // break는 if문에 단독으로 사용하면 안된다.
 
         // if(10>5){ break } <- 오류임
-        // cae마다 중간에 break를 넣어주지 않으면 }를 만날 때까지 동작함
+        // case마다 중간에 break를 넣어주지 않으면 }를 만날 때까지 동작함
     
 
         // switch( 10){
@@ -172,21 +172,21 @@
         // for(;true;){  }
 
 
-        com = Math.floor(Math.random() * 50) + 1;
+        // com = Math.floor(Math.random() * 50) + 1;
 
-        var i=1;
-        while( true){
-            user = Number(prompt("up&down 숫자 맞추기: "));
-            if(user == com){
-                document.wrtie("<br> 정답");
-                break;  // while문 종료
-            }else if( user > com ){ // 컴퓨터의 숫자보다 크게 입력한 경우
-                alert("DOWN");
-            }else if( user < com ){ // 컴퓨터의 숫자보다 작게 입력한 경우 
-                alert("up");
-            }
-            i++;
-        }
+        // var i=1;
+        // while( true){
+        //     user = Number(prompt("up&down 숫자 맞추기: "));
+        //     if(user == com){
+        //         document.write("<br> 정답");
+        //         break;  // while문 종료
+        //     }else if( user > com ){ // 컴퓨터의 숫자보다 크게 입력한 경우
+        //         alert("DOWN");
+        //     }else if( user < com ){ // 컴퓨터의 숫자보다 작게 입력한 경우 
+        //         alert("up");
+        //     }
+        //     i++;
+        // }
         // 입장바꿔서 -> 내가 제시한 숫자를 컴퓨터가 맞추도록
 
 
@@ -200,7 +200,21 @@
            + 는 작은 숫자 1
         */
         
+        user = Number(prompt("1~50 중 숫자 하나를 고르세요"));
 
+        var i=1;
+        while( true){
+            com = Math.floor(Math.random() * 50) + 1;
+            if (user == com){
+                document.write("<br> 정답");
+                break;
+            }else if ( user > com ){
+                alert("DOWN");
+            }else if ( user < com ){
+                alert("UP");
+            }
+        }   i++;
+            
 
 
     </script>
